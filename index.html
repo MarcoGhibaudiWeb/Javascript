@@ -1,0 +1,173 @@
+<html>
+
+    <head>
+
+        <title>Pizza Boutique</title>
+        
+        <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+        <script src="js/jquery-2.1.4.min.js"></script>
+
+        <script type="text/javascript" src="js/script.js"></script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaRo1N0gk-OQahvq-AcGvgfSdNjT16FWA&callback=initMap"></script>
+
+        <link  rel="stylesheet"  href="css/style.css"/>
+        
+    </head>
+
+    <body onload="reset()"> 
+
+        <div id="bgImage">
+            <img src="assets/menu4.jpg">
+            <img src="assets/pizza10.jpg">
+            <img src="assets/dessert2.jpg">
+            <img src="assets/special1.jpg">
+            <img src="assets/pizza8.jpg">
+            <img src="assets/dessert1.jpg">
+            <img src="assets/pizza6.jpg">
+        </div>
+
+        <div id="page">
+        
+            <div class="logo" id="0" onclick="navigation(this.id)">
+                <img src="assets/logo.png" id="logoAnimation" />
+            </div>
+
+            <div id="nav">
+                <ul>
+                    <li onclick="navigation(this.id)" id="1"> Cucina</li>
+                    <li onclick="navigation(this.id)" id="2"> Pizze</li>
+                    <li onclick="navigation(this.id)" id="3"> Special</li>
+                    <li onclick="navigation(this.id)" id="4"> Our Story</li>
+                    <li onclick="navigation(this.id)" id="5"> Info and Bookings</li>
+                </ul>
+            </div>
+
+
+<div class="clear"></div>
+
+            <div id="content">
+
+                <div id="welcome" class=" box">
+                    <h1>Pizza Boutique</h1>
+                    <p>"We are here to provide our customers with exciting, freshly made and locally sourced food that suits each clients location, budget and dietary requirements. We strive to create beautifully presented and well thought out menus to ensure our passion and love for what we do always comes across in our food."</p>
+                </div>
+            
+                <div id="ristorante">
+            
+                    <div id="menu1" class="boxSml scroll">
+                        <h1> Ristorante </h1>
+                        <p class="underline sml">Click on the menu to have a preview</p>
+                        <p id="menu1" onclick="gallery(this.id)"><span class="underline"> Lasagna</span> - Mozzarella, Tomato, Basil</p>
+                        <p id="menu2" onclick="gallery(this.id)"><span class="underline"> Pasta e Ceci </span>- Mozzarella, Tomato, Basil</p>
+                        <p id="menu3" onclick="gallery(this.id)"><span class="underline"> Luinguine allo Scoglio</span> -  Tomato, Basil ,Mozzarella, Tomato, Basil</p>
+                        <p id="menu4" onclick="gallery(this.id)"><span class="underline"> Caprese</span> - Mozzarella, Tomato, Basil,Mozzarella, Tomato</p>
+                    </div>
+
+                    <div id="menu2" class="boxSml scroll">
+                        <h1> Dessert </h1>
+                        <p class="underline sml">Click on the menu to have a preview</p>
+                        <p id="dessert1" onclick="gallery(this.id)"><span class="underline"> Frittelle </span>- 1000 island dressing, canadian bacon, sauerkraut </p>
+                        <p id="dessert2" onclick="gallery(this.id)"><span class="underline"> Rum Baba</span> - pizza sauce, bacon, mozzarella</p> 
+                    </div>
+            
+                </div>
+
+                <div id="pizze">
+            
+                    <div id="pizze1" class="boxSml scroll">
+                        <h1> Pizze Rosse </h1>
+                        <p class="underline sml">Click on the menu to have a preview</p>
+                        <p id="pizza1" onclick="gallery(this.id)"><span class="underline"> Margherita</span>- 1000 island dressing, canadian bacon, sauerkraut, mozzarella </p>
+                        <p id="pizza2" onclick="gallery(this.id)"><span class="underline"> Antani</span>- pizza sauce, bacon, mozzarella, cheddar</p>
+                        <p id="pizza5" onclick="gallery(this.id)"><span class="underline">Marinara</span> - pizza sauce, sausage, taco seasoning, mozzarella, cheddar, topped with lettuce, tomato & taco chips, w/taco sauce packets</p>
+                        <p id="pizza4" onclick="gallery(this.id)"><span class="underline"> Speck e Zola</span> - pizza sauce, sausage, pepperoni, mushroom, mozzarella</p>
+                        <p id="pizza10" onclick="gallery(this.id)"><span class="underline"> Spraffullo</span> - pizza sauce,  mushroom, onion, green pepper, mozzarella</p>
+                    </div>
+
+                    <div id="calzoni" class="boxSml scroll">
+                        <h1> Pizze Bianche </h1>
+                        <p class="underline sml">Click on the menu to have a preview</p>
+                        <p id="pizza6" onclick="gallery(this.id)"><span class="underline"> Tonno e Cipolle</span> - canadian bacon, sauerkraut, mozzarella </p>
+                        <p id="pizza3" onclick="gallery(this.id)"><span class="underline"> Quattro Formaggi</span> - pizza sauce, bacon, salami, mayo</p>
+                        <p id="pizza7" onclick="gallery(this.id)"><span class="underline"> Triplo Zola</span> - pizza sauce,  mozzarella, cheddar, topped with lettuce, tomato & taco chips, w/taco sauce packets</p>
+                        <p id="pizza8" onclick="gallery(this.id)"><span class="underline"> Spraffullo</span> - pizza sauce,  mushroom, onion, green pepper, mozzarella</p> 
+                        <p id="pizza9" onclick="gallery(this.id)"><span class="underline"> Fiorentina</span> - antonio, mauro, gennaro, pasquale</p>     
+                    </div>
+           
+                </div>
+
+                <div id="special" class= "box">
+                    <h3>This Week's Special</h3>
+                    <img src="assets/special1.jpg">
+                    <p>This week's special is dedicated to all the lovers out there, for Valentine's day we are gonna
+                        offer you a 15$ offer, pizza and a bottle of prosecco. The cheers are on us!</p>
+                </div>
+
+                <div id="ourStory" class=" box">
+                    <h3> Our Story</h3>
+                    <p>At Forestville Pizzeria, we are a family business in the small river community of Forestville in West Sonoma County, CA. We opened our doors in December of 2011 in the Westside Center, where prior pizza restaurants had been for a number of years.</p>
+                    <p>Our goal was to open a restaurant in a small community where we could get to know our customers, and be involved in the community. A family business for our children to grow up around, and spend time together was what we envisioned. After months of searching for just the right place, we found our location in Forestville!</p>
+                </div>
+
+                <div id="Info">
+            
+                    <div id="contacts" class="boxSml">
+                        <h1> Contacts </h1>
+                        <p>Our Phone : 01825489067</p>
+                        <p>Our Email : pizzorante@live.com</p>
+                        <p>TimeTable:<br> Mon-Fri 12:00 - 22:00 <br> Weekend 16:00-22:00 </p>
+                        <p>Where we are : 101 Peggiori Bar di Caracas, Venezuela </p>
+                        <br><br>
+                        <button onclick="map()" id="buttonMap"> Show on map </button>
+                    </div>
+
+                    <div id="bookings" class="boxSml">
+                        <h1> Bookings</h1>
+                        <p id="bookingText" class="underline sml"> All the fields are mandatory</p>
+                        <form id="form" action="html/thanks.html" onsubmit="return validateForm()" method="post">
+                            Full Name:<input type="text" id="name" onkeypress="changeNormal(this)"><br>
+                            <br>
+                            Email:<input type="text" id="email" onkeypress="changeNormal(this)"><br>
+                            <br>
+                            Telephone <br> Number: +44 (0) <input type="text" id="tnumb" onkeypress="changeNormal(this)"><br>
+                            <br>
+                            Seats: <input type="text" id="seats" onkeypress="changeNormal(this)" ><br>
+                            <br>
+                            Date: <input type="date" id="date" onkeypress="changeNormal(this)" ><br>
+                            <br>
+                            Time: <select id="time" onkeypress="changeNormal(this)" >
+                                    <option>Select Time</option>
+                                    <option value="7-7:30">7-7:30</option>
+                                    <option value="7:30-8">7:30-8</option>
+                                    <option value="8-8:30">8-8:30</option>
+                                    <option value="8:30-9">8:30-9</option>
+                                    <option value="9-9:30">9-9:30</option>
+                                  </select> 
+                            <br>
+                            <input type="submit" value="Book Now" id="buttonBookNow">
+                        </form>
+                    </div>
+
+                </div>
+
+                <div id="popGallery">
+                    <img>
+                    <div class="x"><img src="assets/x.png"class="x" ></div>
+                </div>
+
+                <div id="popMap">
+                    <div id="map"></div>
+                    <div class="x"><img src="assets/x.png" ></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+    
+</html>
+    
+
